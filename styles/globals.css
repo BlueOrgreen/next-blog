@@ -19,3 +19,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+body {
+  background-color: aliceblue;
+}
+
+.content-layout {
+  width: 1080px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+}

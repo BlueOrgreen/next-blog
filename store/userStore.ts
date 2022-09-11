@@ -1,4 +1,5 @@
 export type IUserInfo = {
+  id?: number | null,
   userId?: number | null,
   nickname?: string,
   avator?: string,

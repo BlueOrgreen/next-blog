@@ -1,8 +1,6 @@
 import "reflect-metadata";
 import { Connection, getConnection, createConnection } from 'typeorm';
-import { User } from "./entity/user";
-import { UserAuth } from "./entity/userauth";
-import { Article } from "./entity/article";
+import { User, UserAuth, Article, Comment } from './entity/index';
 
 const type = process.env.DATABASE_TYPE as "mysql" | "mariadb";
 const host = process.env.DATABASE_HOST;
@@ -31,7 +29,7 @@ export const prepareConnection = () => {
         username,
         password,
         database,
-        entities: [User, UserAuth, Article],
+        entities: [User, UserAuth, Article, Comment],
         synchronize: false,
         logging: true
       })
